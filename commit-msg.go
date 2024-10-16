@@ -16,8 +16,17 @@ func main() {
 	re := regexp.MustCompile(`^(?i)(fix|feat|breaking\schange|docs|test|chore|refactor|build|style):`)
 
 	if !re.MatchString(string(data)) {
-		
-		fmt.Println("\033[31m[POLICY] Your message is not formatted correctly\033[0m")
+		fmt.Println("\033[31m[MESSAGE FORMAT ERROR] Your commit message is not formatted correctly.\033[0m")
+		fmt.Println("\033[33mPlease start your commit message with one of the following tags:\033[0m")
+		fmt.Println("\033[32m- fix:      A bug fix")
+		fmt.Println("- feat:     A new feature")
+		fmt.Println("- BREAKING CHANGE: Introduces breaking API changes")
+		fmt.Println("- docs:     Documentation changes")
+		fmt.Println("- test:     Adding or modifying tests")
+		fmt.Println("- chore:    Routine tasks, build process, or auxiliary tools")
+		fmt.Println("- refactor: Code refactoring without changing functionality")
+		fmt.Println("- build:    Changes that affect the build system or external dependencies")
+		fmt.Println("- style:    Code style updates (formatting, etc.)\033[0m")
 		os.Exit(1)
 	}
 }
