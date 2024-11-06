@@ -13,7 +13,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("\033[31mFailed to read file: %v\033[0m", err)
 	}
-	re := regexp.MustCompile(`^(?i)(fix|feat|breaking\schange|docs|test|chore|refactor|build|style):`)
+	re := regexp.MustCompile(`^(?i)(fix|feat|breaking\schange|docs|test|perf|chore|revert|hotfix|refactor|build|style|release):`)
 
 	if !re.MatchString(string(data)) {
 		fmt.Println("\033[31m[MESSAGE FORMAT ERROR] Your commit message is not formatted correctly.\033[0m")
@@ -23,10 +23,14 @@ func main() {
 		fmt.Println("- BREAKING CHANGE: Introduces breaking API changes")
 		fmt.Println("- docs:     Documentation changes")
 		fmt.Println("- test:     Adding or modifying tests")
+		fmt.Println("- perf:     Improving performance")
 		fmt.Println("- chore:    Routine tasks, build process, or auxiliary tools")
+		fmt.Println("- revert:    Revert a previous commit")
+		fmt.Println("- hotfix:    An urgent fix")
 		fmt.Println("- refactor: Code refactoring without changing functionality")
 		fmt.Println("- build:    Changes that affect the build system or external dependencies")
-		fmt.Println("- style:    Code style updates (formatting, etc.)\033[0m")
+		fmt.Println("- style:    Code style updates (formatting, etc.)")
+		fmt.Println("- release:    for a release version\033[0m")
 		os.Exit(1)
 	}
 }

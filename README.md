@@ -90,10 +90,14 @@ Please start your commit message with one of the following tags:
 - BREAKING CHANGE: Introduces breaking API changes
 - docs:     Documentation updates
 - test:     Adding or modifying tests
+- perf:     Improving performance
 - chore:    Routine tasks, build process, or auxiliary tools
+- revert:   Revert a previous commit
+- hotfix:   An urgent fix
 - refactor: Code restructuring without changing functionality
 - build:    Changes that affect the build system or dependencies
 - style:    Code style updates (formatting, etc.)
+- release:    for a release version
 ```
 
 
