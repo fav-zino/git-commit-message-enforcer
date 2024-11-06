@@ -30,7 +30,7 @@ func main() {
 		fmt.Println("- refactor: Code refactoring without changing functionality")
 		fmt.Println("- build:    Changes that affect the build system or external dependencies")
 		fmt.Println("- style:    Code style updates (formatting, etc.)")
-		fmt.Println("- release:    for a release version\033[0m")
+		fmt.Println("- release:    For a release version\033[0m")
 		os.Exit(1)
 	}
 }

@@ -13,10 +13,14 @@ A simple script to enforce standardized Git commit messages across your project.
   - `BREAKING CHANGE:` - Breaking API changes
   - `docs:` - Documentation updates
   - `test:` - Test additions or updates
+  - `perf:` - Improving performance
   - `chore:` - Routine tasks or build system updates
+  - `revert:` - Revert a previous commit
+  - `hotfix:` - An urgent fix
   - `refactor:` - Code restructuring without behavior change
   - `build:` - Build system or dependency changes
   - `style:` - Code formatting or style adjustments
+  - `release:` - For a release version
 - **Validation**: Prevents commits with invalid tags, ensuring a consistent format across your project.
 
 ## Installation
