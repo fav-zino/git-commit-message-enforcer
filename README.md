@@ -36,8 +36,10 @@ A simple script to enforce standardized Git commit messages across your project.
    Locate your Git installation directory on your computer. This is typically found in:
 
    Windows: `C:\Program Files\Git\` or `C:\Users\YourUsername\AppData\Local\Programs\Git\`
+   
    Mac/Linux: `/usr/local/git/` or `/etc/git/`
-   Once you've found the Git installation folder, navigate to it and look for a folder named `hooks`. If it doesn’t already exist, create a new folder named `hooks `.
+
+    Once you've found the Git installation folder, navigate to it and look for a folder named `hooks`. If it doesn’t already exist, create a new folder named `hooks `.
 
 4. **Copy the Script to the Hooks Folder**  
    Move the downloaded script to the newly created `hooks` folder and rename it as `commit-msg`.
