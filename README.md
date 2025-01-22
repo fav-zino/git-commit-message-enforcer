@@ -32,19 +32,23 @@ A simple script to enforce standardized Git commit messages across your project.
    - **MacOS**: `build/macOS`
    - **Windows**: `build/windows`
 
-2. **Create the Hooks Folder**  
-   Navigate to your Git installation directory and create a folder named `hooks` (if it doesn’t already exist).
+2. **Create the Hooks Folder**
+   Locate your Git installation directory on your computer. This is typically found in:
 
-3. **Copy the Script to the Hooks Folder**  
+   Windows: `C:\Program Files\Git\` or `C:\Users\YourUsername\AppData\Local\Programs\Git\`
+   Mac/Linux: `/usr/local/git/` or `/etc/git/`
+   Once you've found the Git installation folder, navigate to it and look for a folder named `hooks`. If it doesn’t already exist, create a new folder named `hooks `.
+
+4. **Copy the Script to the Hooks Folder**  
    Move the downloaded script to the newly created `hooks` folder and rename it as `commit-msg`.
 
-4. **Make the Script Executable (Linux/MacOS)**  
+5. **Make the Script Executable (Linux/MacOS)**  
    Run the following command to make the script executable:
    ```bash
    chmod +x ~/Git/hooks/commit-msg
    ```
 
-5. **Apply Globally (Optional)**  
+6. **Apply Globally (Optional)**  
    To enforce this hook across all repositories on your system:
 
    Example for windows
@@ -56,14 +60,14 @@ A simple script to enforce standardized Git commit messages across your project.
    git config --global core.hookspath ~/Git/hooks
    ```
 
-6. **Reinitialize Existing Repositories**  
+7. **Reinitialize Existing Repositories**  
    For existing repositories to recognize the global hook path, run:
    ```bash
    git init
    ```
    This will not affect the repository contents or history.
 
-7. **Verify the Hook**  
+8. **Verify the Hook**  
    To test the hook, make a commit. If the message format is incorrect, an error will display with guidance on the correct tags.
 
 ## Usage
